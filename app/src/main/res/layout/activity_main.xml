@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editText_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textView_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="50sp"
+            android:fontFamily="casual"
+            android:layout_margin="8dp"
+            android:layout_below="@id/editText_name"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/button_decrease"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_below="@id/editText_name"
+            android:layout_toStartOf="@id/textView_amount"
+            android:layout_toLeftOf="@id/textView_amount"
+            android:layout_alignTop="@id/textView_amount"
+            android:layout_alignBottom="@id/textView_amount"/>
+
+        <Button
+            android:id="@+id/button_increase"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_toEndOf="@id/textView_amount"
+            android:layout_below="@id/editText_name"
+            android:layout_alignTop="@id/textView_amount"
+            android:layout_alignBottom="@id/textView_amount"
+            android:layout_toRightOf="@id/textView_amount" />
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_below="@id/editText_name"
+            android:layout_toEndOf="@id/button_increase"
+            android:layout_alignTop="@id/button_increase"
+            android:layout_alignBottom="@id/button_increase"
+            android:layout_marginStart="8dp"
+            android:layout_toRightOf="@id/button_increase"
+            android:layout_marginLeft="8dp" />
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textView_amount"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
